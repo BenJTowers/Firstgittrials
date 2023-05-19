@@ -22,41 +22,37 @@ public class ObjectThing extends JComponent {
     public void moveLeft() {
         int x = getX() - 10;
         int y = getY();
-        int maxX = getParent().getWidth() - getWidth();
-        if (x > maxX) {
-            x = maxX;
+        System.out.printf("coordinates= %d %d\n", x, y);
+        if (x > -60) {
+            setLocation(x, y);
         }
-        setLocation(x, y);
     }
 
     public void moveRight() {
         int x = getX() + 10;
         int y = getY();
-        int maxX = getParent().getWidth() - getWidth();
-        if (x > maxX) {
-            x = maxX;
+        System.out.printf("coordinates= %d %d\n", x, y);
+        if (x < 700) {
+            setLocation(x, y);
         }
-        setLocation(x, y);
     }
 
     public void moveUp() {
         int x = getX();
         int y = getY() - 10;
-        int maxX = getParent().getWidth() - getWidth();
-        if (x > maxX) {
-            x = maxX;
+        System.out.printf("coordinates= %d %d\n", x, y);
+        if (y > -60) {
+            setLocation(x, y);
         }
-        setLocation(x, y);
     }
 
     public void moveDown() {
         int x = getX();
         int y = getY() + 10;
-        int maxX = getParent().getWidth() - getWidth();
-        if (x > maxX) {
-            x = maxX;
+        System.out.printf("coordinates= %d %d\n", x, y);
+        if (y < 480) {
+            setLocation(x, y);
         }
-        setLocation(x, y);
     }
 }
 
